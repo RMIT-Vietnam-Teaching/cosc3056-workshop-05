@@ -80,6 +80,7 @@ public class PageIndex implements Handler {
         // Finish the List HTML
         html = html + "</ul>";
         
+        // Altneratively we can use JDBCConnection to add HTML for the movies list
         JDBCConnection jdbc = new JDBCConnection();
         ArrayList<Movie> movies = jdbc.getMovies();
         html = html + "<h1>All Movies with Years (from JDBCConnection)</h1>" +
